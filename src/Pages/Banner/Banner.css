@@ -1,0 +1,18 @@
+.banner {
+  background-image: url(../../Images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 500px;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 90%);
+}
+.banner-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+
+  padding-bottom: 15%;
+  background-color: rgba(175, 108, 238, 0.198);
+}
