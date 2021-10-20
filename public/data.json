@@ -1,72 +1,44 @@
 [
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Esther Sweeney",
-      "Job": "UNDERTAP",
-      "phone": "+1 (982) 424-2470"
-    },
-    {
-      "id": 2,
-      "picture": "http://placehold.it/32x32",
-      "name": "Florine Jensen",
-      "Job": "MAGNEMO",
-      "phone": "+1 (930) 443-3846"
-    },
-    {
-      "id": 3,
-      "picture": "http://placehold.it/32x32",
-      "name": "Hull Henson",
-      "Job": "OMATOM",
-      "phone": "+1 (843) 427-2251"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Rhodes Myers",
-      "Job": "FLYBOYZ",
-      "phone": "+1 (807) 543-2041"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Dale Hansen",
-      "Job": "ARCTIQ",
-      "phone": "+1 (835) 500-2795"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Wise Duncan",
-      "Job": "EARTHMARK",
-      "phone": "+1 (870) 559-3673"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Bowman Houston",
-      "Job": "BUZZNESS",
-      "phone": "+1 (892) 572-2864"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Megan Rivera",
-      "Job": "RUBADUB",
-      "phone": "+1 (957) 544-2317"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Stout Sullivan",
-      "Job": "NORALEX",
-      "phone": "+1 (846) 450-3344"
-    },
-    {
-      "id": 1,
-      "picture": "http://placehold.it/32x32",
-      "name": "Faulkner Solomon",
-      "Job": "CALCULA",
-      "phone": "+1 (802) 441-3059"
-    }
-  ]
+  {"id":1,
+    "name":"Dr. Alma Alo",
+    "img":"https://i.ibb.co/3WZgVrr/doc12.jpg",
+    "phone" : "+88013345934",
+    "skils":"Doctor of Clinical Medicine (DCM)",
+    "about":"Doctor of Medicine (abbreviated M.D., from the Latin Medicinae Doctor) is a medical degree, the meaning of which varies between different jurisdictions. "
+  },
+{"id":2,
+  "name":"Dr. Connor Cancio  ",
+  "img":"https://i.ibb.co/txM740S/doc11.png",
+  "phone" : "+88014345934",
+    "skils":"Master of Clinical Medicine (MCM)",
+    "about":"The MS in biomedical informatics at NYU School of Medicine’s Sackler Institute of Graduate Biomedical Sciences sharpens students’ practical skills in basic science, translational science, and medical research"
+},
+{"id":3,
+  "name":"Dr. Hannah Durphey",
+  "img":"https://i.ibb.co/TqBsRYp/doc8.png",
+  "phone" : "+88017345934",
+    "skils":"Master of Medical Science (MMSc, MMedSc)",
+    "about":"A master’s degree may be required for certain jobs of graduate degree programs. Students can use them to broaden their educational horizons of specific subjects or business sectors, and degrees can improve earning potential as well. "
+},
+{"id":4,
+  "name":"Dr. Javier Klinge",
+  "img":"https://i.ibb.co/sywp6gt/doc7.png",
+  "phone" : "+88015365934",
+    "skils":"Master of Public Health (MPH)",
+    "about":" The MPH degree focuses on public health practice, as opposed to research or teaching. Master of Public Health programs are available throughout the world in Schools of Public Health"
+},
+{"id":5,
+  "name":"Dr. Tyler Peil",
+  "img":"https://i.ibb.co/sFqdMD6/doc6.jpg",
+  "phone" : "+88015343934",
+    "skils":"Master of Medicine (MM, MMed)",
+    "about":"The advantages of MMed over membership certificated qualifications are that, whilst both groups are clinically competent at their levels, MMed specialist can enrol into a four year PhD plus fellowship and come out as consultants with PhD or do a two year fellowship without PhD."
+},
+{"id":6,
+  "name":"Dr. Logan Yoho",
+  "img":"https://i.ibb.co/ZBYXRWd/doc5.png",
+  "phone" : "+88019905934",
+    "skils":"Master of Philosophy (MPhil)",
+    "about":"An MPhil typically includes a taught portion and a significant research portion, during which a thesis project is conducted under supervision. "
+}
+]

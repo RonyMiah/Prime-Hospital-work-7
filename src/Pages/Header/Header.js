@@ -24,14 +24,13 @@ const Header = () => {
         <Nav.Link as={Link} to="/home">Home</Nav.Link>
         <Nav.Link as={Link} to="/covid">Covid-19</Nav.Link>
         <Nav.Link as={Link} to="/doctor">Doctor</Nav.Link>
-        <Nav.Link as={Link} to="/service">Service</Nav.Link>
         <Nav.Link as={Link} to="/contuct">Contuct Us</Nav.Link>
         
         
       </Nav>
       <Form className="d-flex">
       
-      <Nav.Link className=" fw-bold text-info" href="/login"> {user?.displayName} ( {user?.email})</Nav.Link>
+      <Nav.Link className=" fw-bold text-info" href="/login"> {user?.displayName} </Nav.Link>
      { 
      user.email?
      <Button onClick={logOut} className="btn btn-warning" variant="warning">LogOut</Button>

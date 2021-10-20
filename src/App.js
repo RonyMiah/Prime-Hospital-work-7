@@ -6,9 +6,13 @@ import Register from './Pages/Register/Register';
 import Home from './Pages/Home/Home';
 import Header from './Pages/Header/Header';
 import Covid from './Pages/Covid/Covid';
-import Doctor from './Pages/Doctor/Doctor';
 import Contuct from './Pages/Contuct/Contuct';
 import AuthProvider from './Context/AuthProvider';
+import Footer from './Pages/Footer/Footer';
+import ViewCard from './Pages/ViewCard/ViewCard';
+import Notfound from './Pages/Notfound/Notfound';
+import Doctor from './Pages/Doctor/Doctor';
+
 
 
 function App() {
@@ -16,7 +20,10 @@ function App() {
     <div className="App">
     <AuthProvider>
     <BrowserRouter>
+
      <Header></Header>
+     
+
      <Switch>
        <Route path="/home">
            <Home></Home>
@@ -25,11 +32,13 @@ function App() {
         <Covid></Covid>
        </Route>
        <Route path="/doctor">
-        <Doctor></Doctor>
+       <Doctor></Doctor>
        </Route>
-       
        <Route path="/contuct">
         <Contuct></Contuct>
+       </Route>
+       <Route exact path="/viewCard/:cardId"> 
+              <ViewCard></ViewCard>
        </Route>
        <Route path="/login">
            <Login></Login>
@@ -37,7 +46,11 @@ function App() {
        <Route path="/register">
            <Register></Register>
        </Route>
+       <Route exact path="*">
+           <Notfound></Notfound>
+       </Route>
      </Switch>
+     <Footer></Footer>
      </BrowserRouter>
     </AuthProvider>
     </div>
