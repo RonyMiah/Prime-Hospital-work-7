@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Login from './Pages/Login/Login';
@@ -12,6 +11,9 @@ import Footer from './Pages/Footer/Footer';
 import ViewCard from './Pages/ViewCard/ViewCard';
 import Notfound from './Pages/Notfound/Notfound';
 import Doctor from './Pages/Doctor/Doctor';
+import PrivetRoute from './Pages/Login/PrivetRoute';
+import Branch from './Pages/Branch/Branch';
+
 
 
 
@@ -25,27 +27,34 @@ function App() {
      
 
      <Switch>
-       <Route path="/home">
+     <Route exact path="/">
            <Home></Home>
        </Route>
-       <Route path="/covid">
+       <Route exact path="/home">
+           <Home></Home>
+       </Route>
+       <Route exact path="/covid">
         <Covid></Covid>
        </Route>
-       <Route path="/doctor">
+       <PrivetRoute exact path="/doctor">
        <Doctor></Doctor>
-       </Route>
-       <Route path="/contuct">
+       </PrivetRoute>
+       <Route exact path="/contuct">
         <Contuct></Contuct>
        </Route>
-       <Route exact path="/viewCard/:cardId"> 
+       <PrivetRoute exact path="/viewCard/:cardId"> 
               <ViewCard></ViewCard>
-       </Route>
-       <Route path="/login">
+       </PrivetRoute>
+       <Route exact path="/login">
            <Login></Login>
        </Route>
-       <Route path="/register">
+       <Route exact path="/register">
            <Register></Register>
        </Route>
+       <PrivetRoute exact path="/branch">
+          <Branch></Branch>
+       </PrivetRoute>
+
        <Route exact path="*">
            <Notfound></Notfound>
        </Route>

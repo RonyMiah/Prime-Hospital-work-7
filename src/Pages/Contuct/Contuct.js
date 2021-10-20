@@ -18,9 +18,9 @@ const Contuct = () => {
                 
                   <div className="count-phone">
                       <h1  className="fs-1 text-primary fw-bloder">Phone us </h1>
-                      <p><i class="fas fa-phone-volume"></i>+9978494</p>
-                      <p><i class="fas fa-phone-volume"></i>+8973834</p>
-                      <p><i class="fas fa-phone-volume"></i>+5389399</p>
+                      <p><i className="fas fa-phone-volume"></i>+9978494</p>
+                      <p><i className="fas fa-phone-volume"></i>+8973834</p>
+                      <p><i className="fas fa-phone-volume"></i>+5389399</p>
                       
                   </div>
                   

@@ -17,9 +17,9 @@ const Footer = () => <footer className="page-footer font-small blue pt-4 mt-5">
              <h5 className=" text-warning fs-1 fw-bolder text-uppercase">Home Service</h5>
              <br />
                 <ul className="list-unstyled">
-                    <li><i class="fas fs-1 fa-search-plus "></i></li>
+                    <li><i className="fas fs-1 fa-search-plus "></i></li>
                     <br />
-                    <i class="fas fs-1 fa-clinic-medical"></i>
+                    <i className="fas fs-1 fa-clinic-medical"></i>
                  
                 </ul>
             </div>

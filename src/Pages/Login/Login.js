@@ -1,57 +1,62 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { useHistory, useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
     
 
 const Login = () => {
 
-    const {signInUsingGoogle}=useAuth();
+    const {signInUsingGoogle, setUser, setIsLoading,handleUserLogin,  error, setError}=useAuth();
 
+    
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || "/home"
 
+    const handleSignInGoogle = () => {
+        setIsLoading(true)
+        setError('')
+        signInUsingGoogle()
+        .then((result)=>{
+            setUser(result.user)
+            history.push(redirect_url);
 
+        }).catch((err)=>{
+            setError(err.message)
+            alert(err.message)
+        })
+        .finally(()=>setIsLoading(false));
+    }
 
-    const emailPassAuth = getAuth();
-    const [email, setEmail]=useState('');
-    const [password, setPassword]=useState('');
-
-    // Validation For Email and password 
-
-// const handleEmail =e =>{
-//     setEmail(e.target.value);
-// }
-// const handlePassword =e =>{
-//     setPassword(e.target.value);
-// }
-
-//     const handleRegistration =(e)=>{
-//         signInWithEmailAndPassword(emailPassAuth, email, password)
-//         .then(result =>{
-//             const user= result.user;
-//             console.log(user);
-//         })
-//         e.preventDefault();
-
-//     }
-
+    // Handle User Login With Email And Password:
+    const handleLogin = (e) => {
+        setError('')
+        e.preventDefault();
+        handleUserLogin()
+        history.push(redirect_url);
+}
 
     return (
         <div>
-            <form onSubmit=''>
+            <form>
            <div className="login-block">
            <h1>Login</h1>
-           <input onBlur='' type="email"  placeholder="Email" id="username" />
-           <input onBlur='' type="password"  placeholder="Password" id="password" />
-           <button>Log In</button>
+           <input  type="email"  placeholder="Email" id="username" />
+           <input  type="password"  placeholder="Password" id="password" />
+           <button onClick={handleLogin}>Log In</button>
            <br /><br />
-           <input onClick={signInUsingGoogle} className="btn btn-warning text" type="button" value=" Log In  With  Google " />
+           <input onClick={handleSignInGoogle} className="btn btn-warning text" type="button" value=" Log In  With  Google " />
+           {
+               error ? <p className="text-danger">{error}</p> : ''
+           }
             </div>
             <br />
             <br />
-            <p>if you are new <a href="/register">Please Register</a></p>
+            <p>if you are new Please<Link to="/register"> Register</Link></p>
             </form>
             
         </div>

@@ -1,7 +1,7 @@
 
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
-import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../Images/logo1.png'
@@ -25,6 +25,7 @@ const Header = () => {
         <Nav.Link as={Link} to="/covid">Covid-19</Nav.Link>
         <Nav.Link as={Link} to="/doctor">Doctor</Nav.Link>
         <Nav.Link as={Link} to="/contuct">Contuct Us</Nav.Link>
+        <Nav.Link as={Link} to="/branch">Our Branch</Nav.Link>
         
         
       </Nav>
@@ -36,7 +37,7 @@ const Header = () => {
      <Button onClick={logOut} className="btn btn-warning" variant="warning">LogOut</Button>
      :
      
-     <Nav.Link className="btn btn-warning fw-bold text-white" href="/login"> <i className="fas fa-user-check"></i>  Log In</Nav.Link>
+     <Nav.Link as={Link} className="btn btn-warning fw-bold text-white" to="/login"> <i className="fas fa-user-check"></i>  Log In</Nav.Link>
 
      }
          

@@ -13,7 +13,7 @@ const ViewCard = () => {
     } ,[])
 
     const filteredData = users.filter((use) =>{
-        return use.id == cardId
+        return use.id.toString() === cardId.toString()
     })
 
     console.log(filteredData[0])

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import DoctorCard from '../DoctorCard/DoctorCard';
 import './Doctor.css'
 
 const Doctor = () => {
@@ -15,15 +16,19 @@ const Doctor = () => {
 
 
     return (
-        <div className="">
+       <div>
+            <h2 className="fs-1" >Our Doctors</h2>
+            <hr />
+        <div className="row row-cols-1 p-5 row-cols-md-3 g-4 container mx-auto">
             {
                users.map(user=> 
-                <h1>{user.name}</h1>
+                <DoctorCard user={user} key={user.id}></DoctorCard>
                )
                 
             }
             
         </div>
+       </div>
     );
 };
 

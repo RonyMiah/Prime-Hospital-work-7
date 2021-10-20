@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Card.css'
 
 const Card = ({user}) => {
-    const {id,name ,img,skils,phone} = user;
+    const {id,name ,img,skils} = user;
     return (
         <div className="card-design">
             <img src={img} alt="" />
